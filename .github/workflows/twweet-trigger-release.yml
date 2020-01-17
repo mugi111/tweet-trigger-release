@@ -1,0 +1,15 @@
+name: "tweet-trigger-release"
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./
+        with:
+          consumer_key: ${{ secrets.CONSUMER_KEY }}
+          consumer_secret: ${{ secrets.CONSUMER_SECRET }}
+          access_token_key: ${{ secrets.ACCESS_TOKEN_KEY }}
+          access_token_secret: ${{ secrets.ACCESS_TOKEN_SECRET }}
