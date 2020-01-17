@@ -13,7 +13,7 @@ inputs:
   access_token_secret:
     description: 'Twitter access token secret'
     required: true
-  body:
+  tweet_body:
     description: 'Tweet body'
     required: true
 runs:
