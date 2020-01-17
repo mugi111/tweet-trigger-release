@@ -1,7 +1,7 @@
 name: 'Tweet-trigger-publish-release'
 description: 'Tweet trigger create release'
 branding:
-  color: '#00acee'
+  color: 'Blue'
 inputs:
   consumer_key:
     description: 'Twitter consumer key'
