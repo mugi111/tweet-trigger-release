@@ -1,13 +1,21 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Tweet'
+description: 'Tweet trigger create release'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  consumer_key:
+    description: 'Twitter consumer key'
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps 
-    description: 'The message to output'
+  consumer_secret:
+    description: 'Twitter consumer secret'
+    required: true
+  access_token_key:
+    description: 'Twitter access token key'
+    required: true
+  access_token_secret:
+    description: 'Twitter access token secret'
+    required: true
+  body:
+    description: 'Tweet body'
+    required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'
