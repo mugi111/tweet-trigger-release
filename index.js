@@ -10,6 +10,14 @@ async function run() {
       access_token_key: core.getInput('access_token_key'),
       access_token_secret: core.getInput('access_token_secret')
     });
+
+    client.post('statuses/update', {status: 'tweet'}, (error, tweet) => {
+      if (!error) {
+          console.log(tweet);
+      } else {
+          console.log('error');
+      }
+  });
   } 
   catch (error) {
     core.setFailed(error.message);
