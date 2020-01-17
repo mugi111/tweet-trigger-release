@@ -4272,11 +4272,11 @@ async function run() {
       access_token_secret: core.getInput('access_token_secret')
     });
 
-    client.post('statuses/update', {status: 'tweet'}, (error, tweet) => {
+    client.post('statuses/update', {status: core.getInput('tweet_body')}, (error) => {
       if (!error) {
-          console.log(tweet);
+          console.log('Succeeded!');
       } else {
-          console.log('error');
+          console.log('Couldnt tweet.');
       }
   });
   } 

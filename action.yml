@@ -1,4 +1,4 @@
-name: 'Tweet'
+name: 'Tweet-trigger-publish-release'
 description: 'Tweet trigger create release'
 inputs:
   consumer_key:
